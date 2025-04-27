@@ -6,15 +6,18 @@ body {
 
 .gallery {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
   padding: 24px;
   margin: 0 auto;
   max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 }
 
 .gallery-item {
+  flex: 0 0 calc((100% - 32px) / 3);
+  box-sizing: border-box;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
